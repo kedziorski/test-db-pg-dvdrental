@@ -47,13 +47,7 @@ So lets check it using "docker" and "psql":
 ```docker
 docker run -it --rm --link dvdrental:postgres postgres psql -h postgres -U dvdrental -d dvdrental
 ```
-After put password ("dvdrental" to remind) we are connected to database and we can do queries. Let's 
-
-```docker
-docker run -it --rm --link dvdrental:postgres postgres psql -h postgres -U dvdrental -d dvdrental
-```
-
-and then:
+After put password ("dvdrental" to remind) we are connected to database and we can do queries. Let's check actors:
 ```postgresql
 SELECT * FROM actor WHERE first_name ilike 'Kevin';
 ```
